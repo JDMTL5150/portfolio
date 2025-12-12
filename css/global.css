@@ -1,0 +1,109 @@
+
+:root {
+    --font-family: "Inter", "Roboto", sans-serif;
+    --main-front: #e3e2e2;
+    --main-back: #0D1117;
+    --deep-back: #161B22;
+    --green-hover: #32D17C;
+    --green-main: #32CD32;
+    --green-shadow: 0 4px 12px rgba(50, 209, 124, 0.5);
+}
+
+.group-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.group-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: fill 0.4s ease-in-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--green-main);
+    height: 3px;
+    transition: all 0.4s ease-in-out;
+    border-radius: 4px;
+}
+
+hr:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--green-shadow);
+}
+
+.break {
+    width: 100%;
+    height: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-front);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.right a:hover {
+    border-bottom: 3px solid var(--main-front);
+}
+
+.nav {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container {
+    min-height: 100vh;
+}
+
+.right {
+    display: flex;
+    gap: 4rem;
+}
+
+h1 h2 h3 h4 h5 {
+    color: var(--main-front);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+svg {
+    fill: var(--main-front);
+    transition: all 0.3s ease-in-out;
+}
+
+svg:hover {
+    cursor: pointer;
+    fill: var(--green-hover);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--main-back);
+  color: var(--main-front);
+}

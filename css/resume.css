@@ -1,0 +1,36 @@
+
+hr {
+    opacity: 5;
+}
+
+.main-container {
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.aside-card {
+    text-align: center;
+    float: left;
+    background-color: var(--deep-back);
+    min-width: 100%;
+    min-height: 20rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.resume {
+    text-align: center;
+    background-color: var(--deep-back);
+    width: 80%;
+    min-height: 80%;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.pick {
+    width: 5rem;
+    height: auto;
+    margin: 2rem;
+}

@@ -1,0 +1,88 @@
+
+.main-container {
+  text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+}
+
+.hero {
+    padding: 4rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    width: 80%;
+    height: auto;
+    background-color: var(--deep-back);
+    border-radius: 10px;
+    padding: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.about:hover {
+  transform: scale(1.01);
+  box-shadow: var(--green-shadow);
+}
+
+.about h3 {
+    line-height: 2rem;
+}
+
+.project-div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    width: 15rem;
+    background-image: url("../img/temp-bg.jpeg");
+    height: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--deep-back);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: var(--green-shadow);
+}
+
+
+
+.card-btn {
+    border-radius: 10px;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-btn:hover {
+    transform: translateY(-5px);
+    color: var(--main-back);
+    background-color: var(--green-hover);
+}
+
+.inner-proj {
+    border-radius: 10px;
+    height: auto;
+    padding: 2rem;
+    gap: 1rem;
+    margin: 2rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
