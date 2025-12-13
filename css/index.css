@@ -51,6 +51,14 @@
     flex-direction: column;
 }
 
+iframe {
+    transition: var(--transition);
+}
+
+iframe:hover {
+    transform: translateY(-5px);
+}
+
 .card {
     display: none;
     flex-direction: column;
