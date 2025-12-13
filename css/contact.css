@@ -1,0 +1,89 @@
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 60%;
+    height: 60%;
+    padding: 2rem;
+    background-color: var(--deep-back);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--green-shadow);
+}
+
+#messageArea {
+    width: 60%;
+    height: 10rem;
+    background-color: var(--main-back);
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    padding: 1rem;
+    color: var(--green-main);
+}
+
+#email-in {
+    background-image: url("../img/email.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: left;
+}
+
+#name-in {
+    background-image: url("../img/Person.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: left;
+}
+
+.input-field {
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    background-color: var(--main-back);
+    border-radius: 15px;
+    border: none;
+    padding: 0.5rem;
+    padding-left: 40px;
+    color: var(--green-main);
+}
+
+#contactReason {
+    padding: 1rem;
+    background-color: var(--main-back);
+    font-size: 1.1rem;
+    color: var(--green-main);
+    border: none;
+    border-radius: 15px;
+}
+
+#subBtn {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    width: 30%;
+    border-radius: 15px;
+    color: var(--main-front);
+    transition: var(--transition);
+}
+
+#subBtn:hover {
+    transform: translateY(-5px);
+    background-color: var(--green-hover);
+    cursor: pointer;
+    color: var(--main-back);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

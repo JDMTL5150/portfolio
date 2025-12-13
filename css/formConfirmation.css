@@ -1,0 +1,46 @@
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thankyou-div {
+    text-align: center;
+    background-color: var(--deep-back);
+    padding: 3rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: shadow-orbit 1s linear infinite;
+}
+
+#returnBtn {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--main-front);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+@keyframes shadow-orbit {
+  0%   { box-shadow: 0 -6px 12px rgba(50, 209, 124, 0.5); }
+  12%  { box-shadow: 4px -4px 12px rgba(34, 197, 94, 0.5); }
+  25%  { box-shadow: 6px 0 12px rgba(22, 163, 74, 0.5); }
+  37%  { box-shadow: 4px 4px 12px rgba(5, 150, 105, 0.5); }
+  50%  { box-shadow: 0 6px 12px rgba(52, 211, 153, 0.5); }
+  62%  { box-shadow: -4px 4px 12px rgba(34, 197, 94, 0.5); }
+  75%  { box-shadow: -6px 0 12px rgba(22, 163, 74, 0.5); }
+  87%  { box-shadow: -4px -4px 12px rgba(5, 150, 105, 0.5); }
+  100% { box-shadow: 0 -6px 12px rgba(50, 209, 124, 0.5); }
+}
+
+#returnBtn:hover {
+    background-color: var(--green-hover);
+    transform: translateY(-5px);
+    cursor: pointer;
+}

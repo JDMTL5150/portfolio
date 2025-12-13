@@ -14,12 +14,20 @@
     <div class="group-row nav">
         <!-- Header Elements -->
         <div class="left">
-            <h1>&lt;&gt; Jacob Dawes &lt;/&gt;</h1>
+            <h1>
+                <span class="brace">&lt;</span>
+                <span class="tag">Dev</span>
+                <span class="brace">&gt;</span>
+                <span class="nameText">Jacob Dawes</span>
+                <span class="brace">&lt;</span>
+                <span class="brace">/</span>
+                <span class="tag">Dev</span>
+                <span class="brace">&gt;</span>
+            </h1>
         </div>
         <div class="right">
             <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="">Contact Me</a>
+            <a href="contact.html">Contact Me</a>
         </div>
     </div>
     <hr>
@@ -34,24 +42,200 @@
                     <path
                         d="M18.448,26.655c0.001,-0.001 0.001,-0.001 0.001,-0.002c2.407,-3.406 6.792,-9.888 8.717,-14.401c0.535,-1.252 0.882,-2.367 0.983,-3.246c0.088,-0.778 -0.016,-1.414 -0.263,-1.881c-0.359,-0.676 -1.158,-1.309 -2.339,-1.783c-2.201,-0.881 -5.872,-1.342 -9.545,-1.342c-3.673,-0 -7.344,0.461 -9.545,1.342c-1.181,0.474 -1.98,1.107 -2.338,1.783c-0.248,0.467 -0.352,1.103 -0.263,1.881c0.1,0.879 0.447,1.994 0.982,3.246c1.925,4.513 6.31,10.995 8.716,14.402c0.001,0 0.001,0.001 0.001,0.002c0.563,0.792 1.475,1.263 2.447,1.263c0.972,-0 1.884,-0.471 2.446,-1.264Zm-2.455,-17.699l-0.001,0.055l-0,4.601c-0.236,-0.066 -0.485,-0.101 -0.742,-0.101c-1.518,-0 -2.75,1.232 -2.75,2.75c-0,1.517 1.232,2.75 2.75,2.75c1.518,-0 2.75,-1.233 2.75,-2.75c-0,-0.073 -0.008,-4.835 -0.008,-4.835l1.301,1.301c0.39,0.39 1.024,0.39 1.414,-0c0.39,-0.391 0.39,-1.024 0,-1.414l-3.008,-3.009c-0.39,-0.39 -1.024,-0.39 -1.414,0c-0.182,0.181 -0.279,0.415 -0.292,0.652Z" />
                 </svg>
-                <div class="break"></div>
-                <h3>Jacob Dawes</h3>
-                <h6>jacobd2887@gmail.com</h6>
-                <h6>+1 514-778-5101</h6>
+                <h3><strong>Jacob Dawes</strong></h3>
+                <div class="group-row">
+                    <img id="email" src="img/email.png" alt="email-icon">
+                    <h6>jacobd2887@gmail.com</h6>
+                </div>
+                <div class="group-row">
+                    <img id="phone" src="img/Phone.png" alt="phone-icon">
+                    <h6>+1 514-778-5101</h6>
+                </div>
+            </aside>
+
+            <aside class="aside-card">
+                <h2><strong>Skills</strong></h2>
+                <!-- Java Skill -->
+                <div class="group-row">
+                    <img class="skill-icon" src="img/Java.png" alt="Java">
+                    <div class="outer-progress">
+                        <div class="inner" id="inner-bar-java"></div>
+                    </div>
+                </div>
+                <!-- C Skill -->
+                <div class="group-row">
+                    <img class="skill-icon" src="img/C.png" alt="C">
+                    <div class="outer-progress">
+                        <div class="inner" id="inner-bar-c"></div>
+                    </div>
+                </div>
+                <!-- Python Skill -->
+                <div class="group-row">
+                    <img class="skill-icon" src="img/Python.png" alt="Python">
+                    <div class="outer-progress">
+                        <div class="inner" id="inner-bar-python"></div>
+                    </div>
+                </div>
+                <!-- HTML Skill -->
+                <div class="group-row">
+                    <img class="skill-icon" src="img/HTML.png" alt="HTML">
+                    <div class="outer-progress">
+                        <div class="inner" id="inner-bar-html"></div>
+                    </div>
+                </div>
+                <!-- CSS Skill -->
+                <div class="group-row">
+                    <img class="skill-icon" src="img/CSS.png" alt="CSS">
+                    <div class="outer-progress">
+                        <div class="inner" id="inner-bar-css"></div>
+                    </div>
+                </div>
+                <!-- JS Skill -->
+                 <div class="group-row">
+                    <img class="skill-icon" src="img/JavaScript.png" alt="JavaScript">
+                    <div class="outer-progress">
+                        <div class="inner" id="inner-bar-js"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="aside-card">
+                <!-- Languages -->
+                <h2><strong>Languages</strong></h2>
+                <div class="group-row">
+                    <h4>English</h4>
+                    <h1>&rArr;</h1>
+                    <h4 class="badge-green">Fluent</h4>
+                </div>
+                <div class="group-row">
+                    <h4>French</h4>
+                    <h1>&rArr;</h1>
+                    <h4 class="badge-green">Fluent</h4>
+                </div>
             </aside>
             <aside class="aside-card">
-                <h2>Skills</h2>
-                <h3>Skill 1</h3>
-                <h3>Skill 2</h3>
+                <div class="group-row">
+                    <img src="img/certification.png" alt="">
+                    <h2><strong>Certifications</strong></h2>
+                </div>
+                <h6>CPR certified with the Heart and Stroke Foundation</h6>
             </aside>
         </div>
         <div class="resume">
-
+            <button id="edBtn" ><strong>Education ➔</strong></button>
+            <div class="break"></div>
+            <p><strong>Motivated, strong work ethic,</strong> seeking work experience and skill development
+                opportunities within your
+                organization. Fluently bilingual in both French and English</p>
+            <div class="break"></div>
+            <h3><strong>My Work Experience</strong></h3>
+            <!-- Warehouse Worker -->
+            <div class="work-card work">
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Job.png" alt="Job: ">
+                    <h5><strong>Warehouse Worker/Forklift Operator</strong></h4>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Location.png" alt="Location: ">
+                    <h6>FedEx Supply Chain-Saint-Clet, QC</h6>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Clock.png" alt="Duration: ">
+                    <h6>February 2023 to July 2024</h6>
+                </div>
+                <p>I worked sometimes as a general labourer but was mostly either driving a pacer with clamps attached
+                    or forks, or I would drive a narrow aisle Reach Truck. My job was to either build pallets with
+                    customer orders or bring recently built pallets from the receiving area into the warehouse to be
+                    stored.</p>
+            </div>
+            <!-- Costco -->
+            <div class="work-card work">
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Job.png" alt="Job: ">
+                    <h5><strong>Warehouse Worker</strong></h4>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Location.png" alt="Location: ">
+                    <h6>Costco Wholesale-Vaudreuil-Dorion, QC</h6>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Clock.png" alt="Duration: ">
+                    <h6>October 2022 to September 2023</h6>
+                </div>
+                <p>Stocked the pallets, swept the floors when asked, moved certain pallets when needed using a pallet
+                    Jack.</p>
+            </div>
+            <!-- dental tool sterilizer -->
+            <div class="work-card work">
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Job.png" alt="Job: ">
+                    <h5><strong>Dental tool sterilizer</strong></h5>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Location.png" alt="Location: ">
+                    <h6>Dr Bob Clark-Hudson, QC</h6>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Clock.png" alt="Duration: ">
+                    <h6>June 2021 to August 2021</h6>
+                </div>
+                <p>Sterilized dental equipment and repackaged it for its next use.</p>
+            </div>
+            <!-- Bagger -->
+            <div class="work-card work">
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Job.png" alt="Job: ">
+                    <h5><strong>Bagger</strong></h4>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Location.png" alt="Location: ">
+                    <h6>IGA-Saint-Lazare, QC</h6>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Clock.png" alt="Duration: ">
+                    <h6>July 2020 to May 2021</h6>
+                </div>
+                <p>Packed bags at the cash, as well as brought the bags to the cars when asked.</p>
+            </div>
+            <!-- Landsacper -->
+            <div class="work-card work">
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Job.png" alt="Job: ">
+                    <h5><strong>Landscaper</strong></h4>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Location.png" alt="Location: ">
+                    <h6>Stone Landscaping-Vaudreuil-Dorion, QC</h6>
+                </div>
+                <div class="group-row pair">
+                    <img class="job-icon" src="img/Clock.png" alt="Duration: ">
+                    <h6>May 2020 to August 2020 and May 2025 to August 2025</h6>
+                </div>
+                <p>Placed stone and rolls of sod depending on the job site requirements. Utilized heavy machinery (Skid
+                    Steer, mini excavator, compacting equipment).</p>
+            </div>
+        </div>
+        <div class="school">
+            <button id="workBtn" ><strong>⬅︎ Work</strong></button>
+            <div style="justify-content: center;" class="group-row">
+                <img src="img/ed.png" alt="">
+                <h2><strong>My Education</strong></h2>
+            </div>
+            <div class="school-card">
+                <h3>College diploma in Computer Engineering</h3>
+                <h5>Algonquin College - Ottawa, ON</h5>
+                <h6>August 2024 to Present</h6>
+            </div>
+            <div class="school-card">
+                <h3>High School Degree</h3>
+                <h5>Westwood Highschool - Hudson, QC</h5>
+                <h6>August 2017 to June 2021</h6>
+            </div>
         </div>
     </div>
     <hr>
     <footer class="group-col">
-        <div class="group-row">
+        <div id="row">
             <!-- Github icon -->
             <a href="https://github.com/JDMTL5150">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
@@ -74,5 +258,5 @@
         <p>&copy Jacob Dawes 2025. All rights reserved.</p>
     </footer>
 </body>
-
+<script src="JS/changePage.js"></script>
 </html>

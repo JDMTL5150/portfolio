@@ -1,12 +1,14 @@
 
 :root {
     --font-family: "Inter", "Roboto", sans-serif;
+    --title-font: "Lilex", monospace;
     --main-front: #e3e2e2;
     --main-back: #0D1117;
     --deep-back: #161B22;
     --green-hover: #32D17C;
     --green-main: #32CD32;
     --green-shadow: 0 4px 12px rgba(50, 209, 124, 0.5);
+    --transition: all 0.3s ease-in-out;
 }
 
 .group-row {
@@ -28,12 +30,24 @@
     margin: 0;
 }
 
+.brace {
+    color: lightslategrey;
+}
+
+.nameText {
+    color: var(--green-main);
+}
+
 footer {
     text-align: center;
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.tag {
+    color: dodgerblue;
 }
 
 hr {
@@ -60,12 +74,14 @@ a {
     color: var(--main-front);
     padding: 0.5rem;
     font-size: 1.2rem;
-    border-bottom: 3px solid transparent;
+    border-radius: 15px;
     transition: all 0.2s ease-in-out;
 }
 
 .right a:hover {
-    border-bottom: 3px solid var(--main-front);
+    background-color: var(--green-hover);
+    transform: translateY(-5px);
+    color: var(--main-back);
 }
 
 .nav {
@@ -100,6 +116,10 @@ svg {
 svg:hover {
     cursor: pointer;
     fill: var(--green-hover);
+}
+
+footer svg:hover {
+    transform: translateY(-5px);
 }
 
 body {
