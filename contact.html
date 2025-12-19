@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/contact.css">
     <title>Contact Me</title>
 </head>
@@ -19,8 +20,8 @@
             <h1>
                 <span class="brace">&lt;</span>
                 <span class="tag">Dev</span>
-                <span class="brace">&gt;</span> 
-                <span class="nameText">Jacob Dawes</span> 
+                <span class="brace">&gt;</span>
+                <span class="nameText">Jacob Dawes</span>
                 <span class="brace">&lt;</span>
                 <span class="brace">/</span>
                 <span class="tag">Dev</span>
@@ -35,11 +36,8 @@
     <hr>
     <!-- main content -->
     <div class="main-container">
-        <form action="https://formspree.io/f/mldqayya" method="post" class="contact-form">
+        <form id="contactForm" class="contact-form">
             <h2><strong>Contact Me</strong></h2>
-
-            <!-- Silent Redirect to thank you -->
-             <input type="hidden" name="_redirect" value="https://jdmtl5150.github.io/portfolio/formConfirmation.html">
 
             <input required name="userName" type="text" id="name-in" class="input-field" placeholder="Full Name">
             <input required name="userEmail" type="text" id="email-in" class="input-field" placeholder="Email">
@@ -49,8 +47,35 @@
                 <option value="collaboration">Collaboration Request</option>
             </select>
             <textarea required name="userMessage" id="messageArea" placeholder="Enter a message"></textarea>
-            <button type="submit" id="subBtn" >Submit</button>
+            <button type="submit" id="subBtn">Submit</button>
         </form>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", async function (event) {
+                // prevent default form submitting action
+                event.preventDefault();
+                // target the current form
+                const target = event.target;
+                // take data from the event form
+                const data = new FormData(target);
+                // building response and sending it
+                const res = await fetch("https://formspree.io/f/mldqayya", {
+                    // response body
+                    method: "POST",
+                    body: data,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                // check if response is good then redirect to
+                // my own thank you page.
+                if (res.ok) {
+                    window.location.href = "/formConfirmation.html";
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        </script>
     </div>
     <hr>
     <footer class="group-col">
@@ -67,15 +92,16 @@
             <!-- Mail icon -->
             <a href="mailto:jacobd2887@gmail.com">
                 <svg class="mail-filled" role="img" viewBox="0 0 24 24" width="48" height="48"
-                aria-labelledby="mailFilledTitle" xmlns="http://www.w3.org/2000/svg">
-                <title id="mailFilledTitle">Email</title>
-                <path
-                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-            </svg>
+                    aria-labelledby="mailFilledTitle" xmlns="http://www.w3.org/2000/svg">
+                    <title id="mailFilledTitle">Email</title>
+                    <path
+                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
             </a>
         </div>
         <p>&copy Jacob Dawes 2025. All rights reserved.</p>
     </footer>
 </body>
 <script src="JS/carousel.js"></script>
+
 </html>
