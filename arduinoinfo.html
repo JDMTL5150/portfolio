@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&display=swap"
@@ -12,6 +14,10 @@
     <link rel="stylesheet" href="css/arduinoinfo.css">
     <title>Arduino Info</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
 
 <body>
     <div class="group-row nav">
@@ -54,6 +60,84 @@
                 </ul>
             </div>
         </div>
+        <div class="break"></div>
+        <pre class="code-div">
+            <code class="language-c">
+// declaring constants                    
+const int ledpins[] = {D3,D5,D9,D6};
+const int pinsSize = 4;
+
+int i,lastState;
+
+void setup() {
+  // setting pins connected to leds to output
+  for(i = 0; i < pinsSize; i++){
+    pinMode(ledpins[i],OUTPUT);
+  }
+  // setting button and switch as inputs (using pullup resistor)
+  pinMode(D7,INPUT_PULLUP);
+  pinMode(D2,INPUT_PULLUP);
+  lastState = digitalRead(D2);
+}
+
+// read button's current state
+int currentState = digitalRead(D2);
+
+void loop() {
+  if(digitalRead(D7) == HIGH) { return; }
+
+  currentState = digitalRead(D2);
+
+  // sequence (extra when button is pressed)
+  if(currentState != lastState){
+    for(i = 0; i < pinsSize; i++){
+      analogWrite(ledpins[i],150);
+    }
+    delay(1000);
+    for(i = 0; i < pinsSize; i++){
+      analogWrite(ledpins[i],0);
+    }
+    delay(1000);
+    for(i = 0; i < pinsSize; i++){
+      analogWrite(ledpins[i],150);
+    }
+    delay(1000);
+    for(i = 0; i < pinsSize; i++){
+      analogWrite(ledpins[i],0);
+    }
+    delay(1000);
+    lastState = currentState;
+    return;
+  }
+
+  // normal sequence (flash)
+  for(i = 0; i < pinsSize; i++){
+    analogWrite(ledpins[i],150);
+    delay(100);
+    analogWrite(ledpins[i],0);
+  }
+
+  for(i = 0; i < 1; i++){
+    analogWrite(D3,150);
+    delay(100);
+    analogWrite(D3,0);
+  }
+
+  for(i = 0; i < 1; i++){
+    analogWrite(D6,150);
+    delay(100);
+    analogWrite(D6,0);
+  }
+
+  for(i = pinsSize; i > 0; i--){
+    analogWrite(ledpins[i],150);
+    delay(100);
+    analogWrite(ledpins[i],0);
+  }
+}
+
+                </code>
+            </pre>
     </div>
     <hr>
     <footer class="group-col">
