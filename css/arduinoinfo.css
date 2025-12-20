@@ -1,0 +1,47 @@
+
+
+#projVid {
+    width: 30%;
+    height: auto;
+    border-radius: 15px;
+}
+
+@media (max-width: 700px) {
+    #hero-div {
+        flex-direction: column;
+    }
+    .parts-used {
+        flex-direction: column;
+    }
+}
+
+#hero-div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.parts-used ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    font-size: 2rem;
+    gap: 2rem;
+}
+
+#schematic-img {
+    width: 25%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.parts-used li {
+    padding: 0.5rem;
+    background-image: url("../img/component.png");
+    padding-left: 4rem;
+    background-repeat: no-repeat;
+}
