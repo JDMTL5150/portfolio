@@ -93,9 +93,9 @@ iframe:hover {
 }
 
 .changeBtn:hover {
-    background-color: var(--green-hover);
+    transform: translateY(-5px);
     cursor: pointer;
-    color: var(--main-back);
+    color: var(--green-hover);
 }
 
 .card:hover {
