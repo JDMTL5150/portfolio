@@ -40,7 +40,7 @@
             <h2><strong>Contact Me</strong></h2>
 
             <input required name="userName" type="text" id="name-in" class="input-field" placeholder="Full Name">
-            <input required name="userEmail" type="text" id="email-in" class="input-field" placeholder="Email">
+            <input required name="userEmail" type="email" id="email-in" class="input-field" placeholder="Email">
             <select required name="userReason" id="contactReason" class="reasonSelect">
                 <option selected disabled value="default">Choose a reason</option>
                 <option value="general">General Question</option>
@@ -53,6 +53,7 @@
             document.getElementById("contactForm").addEventListener("submit", async function (event) {
                 // prevent default form submitting action
                 event.preventDefault();
+
                 // target the current form
                 const target = event.target;
                 // take data from the event form
