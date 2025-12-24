@@ -8,6 +8,76 @@
     padding: 5rem;
 }
 
+/* Phones */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .card:hover {
+    transform: none; /* disable hover zoom on touch */
+  }
+
+  .changeBtn:hover {
+    transform: none;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .main-container {
+    padding: 2rem;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .about {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .song-div {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  .inner-proj {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .changeBtn {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+
+  .nav .right {
+    display: none; /* optional: hamburger later */
+  }
+}
+
 .hero {
     padding: 4rem;
     font-family: var(--title-font);
@@ -69,7 +139,7 @@ iframe:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: soft-light;
-    height: auto;
+    height: 11rem;
     color: var(--main-front);
     padding: 2rem 2rem 1rem 2rem;
     border-radius: 10px;
