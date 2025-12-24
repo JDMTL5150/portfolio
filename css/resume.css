@@ -214,6 +214,14 @@ hr {
     width: 60%;
 }
 
+#inner-bar-c_plus {
+    width: 0%;
+}
+
+#inner-bar-r {
+    width: 0%;
+}
+
 .work {
     width: 100%;
     height: auto;
