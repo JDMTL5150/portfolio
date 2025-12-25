@@ -34,7 +34,29 @@
             <a href="index.html">Home</a>
             <a href="resume.html">Resume</a>
             <a href="contact.html">Contact Me</a>
-            <img src="img/Menu.png" alt="Menu" id="menu-img">
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <button id="menu-btn"><img src="img/Menu.png" alt="Menu" id="menu-img"></button>
+                <ul class="bar-div" id="bar-m">
+                    <button id="menu-leave">X</button>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <script>
+                const barM = document.getElementById("bar-m");
+                const menuLeave = document.getElementById("mouse-leave");
+                const barBtn = document.getElementById("barBtn");
+
+                barBtn.addEventListener(() => {
+                    barM.classList.toggle("show");
+                });
+
+                menuLeave.addEventListener(() => {
+                    barM.classList.toggle("show");
+                });
+            </script>
         </div>
     </div>
     <hr>
