@@ -179,6 +179,20 @@ iframe {
     max-width: 100%;
   }
 
+  .bar-div a {
+    display: flex;
+  }
+
+  .right {
+    box-sizing: border-box;
+  }
+
+  #menu-img {
+    display: flex;
+    width: 30px;
+    height: auto;
+  }
+
   .inner-proj {
     flex-direction: column;
     margin: 1rem 0;
@@ -224,6 +238,20 @@ iframe {
 .about h3 {
   line-height: 2rem;
 }
+
+.right a {
+    display: none;
+  }
+
+  #title {
+    display: none;
+  }
+
+  #title-img {
+    display: flex;
+    width: 30px;
+    height: auto;
+  }
 
 .card-rel.show {
   display: flex;

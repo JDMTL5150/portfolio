@@ -15,7 +15,7 @@
     <div class="group-row nav">
         <!-- Header Elements -->
         <div class="left">
-            <h1>
+            <h1 id="title">
                 <span class="brace">&lt;</span>
                 <span class="tag">Dev</span>
                 <span class="brace">&gt;</span>
@@ -25,10 +25,34 @@
                 <span class="tag">Dev</span>
                 <span class="brace">&gt;</span>
             </h1>
+            <img src="img/J.png" alt="J" id="title-img">
         </div>
         <div class="right">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact Me</a>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <button id="menu-btn"><img src="img/Menu.png" alt="Menu" id="menu-img"></button>
+                <ul class="bar-div" id="bar-m">
+                    <button id="menu-leave">X</button>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <script>
+                const barM = document.getElementById("bar-m");
+                const menuLeave = document.getElementById("menu-leave");
+                const barBtn = document.getElementById("menu-btn");
+
+                barBtn.addEventListener("click",() => {
+                    barM.classList.toggle("show");
+                });
+
+                menuLeave.addEventListener("click",() => {
+                    barM.classList.toggle("show");
+                });
+            </script>
         </div>
     </div>
     <hr>
@@ -237,6 +261,7 @@
                     Steer, mini excavator, compacting equipment).</p>
             </div>
         </div>
+        <!-- School -->
         <div class="school">
             <button id="workBtn" ><strong>⬅︎ Work</strong></button>
             <div class="break"></div>

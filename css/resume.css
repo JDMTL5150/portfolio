@@ -10,6 +10,142 @@ hr {
     gap: 2rem;
 }
 
+#title-img {
+  display: none;
+}
+
+#menu-img {
+  display: none;
+}
+
+.bar-div {
+  width: 10rem;
+  height: 100vh;
+  background-color: var(--deep-back);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  right: 0rem;
+  top: 0;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.bar-div.show {
+  display: flex;
+}
+
+#menu-leave {
+  background-color: transparent;
+  color: var(--green-hover);
+  border: none;
+  pointer-events: all;
+  position: absolute;
+  right: 2rem;
+}
+
+#menu-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.bar-div a {
+  display: flex !important;
+  font-size: 10px;
+  color: aliceblue;
+}
+
+/* phones */
+@media (max-width: 480px) {
+
+    .main-container {
+        flex-direction: column;
+        padding: 0;
+        margin: 1rem;
+    }
+
+    #title {
+        display: none;
+    }
+
+    .right a {
+        display: none;
+        pointer-events: all;
+    }
+
+    #title-img {
+        display: flex;
+        width: 30px;
+        height: auto;
+    }
+
+    .work-card img {
+        display: none;
+    }
+
+    .work-card h5 {
+        font-size: 18px;
+    }
+
+    .work-card p {
+        font-size: 15px;
+    }
+
+    #menu-img {
+        display: flex;
+        width: 30px;
+        height: auto;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .group-col {
+        width: 100%;
+    }
+
+    .resume {
+        position: relative;
+        width: 100% !important;
+        padding: 0.5rem;
+    }
+
+    .school-card h3 {
+        font-size: 18px;
+    }
+
+    .school-card h5 {
+        font-size: 16px;
+    }
+
+    .school-card h6 {
+        font-size: 14px;
+    }
+
+    .school {
+        width: 100% !important;
+    }
+
+    #edBtn {
+        right: 1rem !important;
+    }
+
+    #workBtn {
+        margin: 0;
+        padding: 0;
+        left: 1rem !important;
+    }
+
+    .aside-card {
+        width: 100%;
+        float: none;
+    }
+}
+
 .aside-card {
     text-align: center;
     float: left;
@@ -49,7 +185,7 @@ hr {
     flex-direction: column;
     pointer-events: none;
     position: absolute;
-    transform: translateY(20px);
+    transform: translateY(120px);
     justify-content: space-between;
     width: 90%;
     height: 0;
@@ -74,7 +210,7 @@ hr {
     display: flex;
     opacity: 0;
     flex-direction: column;
-    transform: translate(120px);
+    transform: translateY(120px);
     pointer-events: none;
     width: 90%;
     max-height: 100%;
