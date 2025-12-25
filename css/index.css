@@ -68,16 +68,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
   }
 
   .card-rel.show {
-    width: 100%;
+    width: 110%;
     height: auto;
   }
 
   .card-o.show {
-    width: 100%;
+    width: 110%;
     height: auto;
   }
 
