@@ -7,53 +7,6 @@
   padding: 5rem;
 }
 
-#title-img {
-  display: none;
-}
-
-#menu-img {
-  display: none;
-}
-
-.bar-div {
-  width: 10rem;
-  height: 100vh;
-  background-color: var(--deep-back);
-  list-style: none;
-  display: none;
-  flex-direction: column;
-  padding: 1rem;
-  align-items: center;
-  right: 0rem;
-  top: 0;
-  border-radius: 15px;
-  position: absolute;
-}
-
-.bar-div.show {
-  display: flex;
-}
-
-#menu-leave {
-  background-color: transparent;
-  color: var(--green-hover);
-  border: none;
-  pointer-events: all;
-  position: absolute;
-  right: 2rem;
-}
-
-#menu-btn {
-  border: none;
-  background-color: transparent;
-}
-
-.bar-div a {
-  display: flex !important;
-  font-size: 10px;
-  color: aliceblue;
-}
-
 /* Phones */
 @media (max-width: 480px) {
 
@@ -238,20 +191,6 @@ iframe {
 .about h3 {
   line-height: 2rem;
 }
-
-.right a {
-    display: none;
-  }
-
-  #title {
-    display: none;
-  }
-
-  #title-img {
-    display: flex;
-    width: 30px;
-    height: auto;
-  }
 
 .card-rel.show {
   display: flex;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
     <link rel="shortcut icon" href="img/J.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&display=swap"
@@ -18,7 +19,7 @@
     <div class="group-row nav">
         <!-- Header Elements -->
         <div class="left">
-            <h1>
+            <h1 id="title">
                 <span class="brace">&lt;</span>
                 <span class="tag">Dev</span>
                 <span class="brace">&gt;</span>
@@ -33,6 +34,29 @@
         <div class="right">
             <a href="index.html">Home</a>
             <a href="resume.html">Resume</a>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <button id="menu-btn"><img src="img/Menu.png" alt="Menu" id="menu-img"></button>
+                <ul class="bar-div" id="bar-m">
+                    <button id="menu-leave">X</button>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <script>
+                const barM = document.getElementById("bar-m");
+                const menuLeave = document.getElementById("menu-leave");
+                const barBtn = document.getElementById("menu-btn");
+
+                barBtn.addEventListener("click",() => {
+                    barM.classList.toggle("show");
+                });
+
+                menuLeave.addEventListener("click",() => {
+                    barM.classList.toggle("show");
+                });
+            </script>
         </div>
     </div>
     <hr>
