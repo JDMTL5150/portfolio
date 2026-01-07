@@ -16,6 +16,7 @@
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+    justify-content: center;
 }
 
 .group-col {

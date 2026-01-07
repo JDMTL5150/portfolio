@@ -54,17 +54,37 @@
   position: absolute;
 }
 
+#leftBtn-m {
+  display: none;
+}
+
+#rightBtn-m {
+  display: none;
+}
+
 .carousel-rel,
 .carousel-o {
   width: 100%;
-  height: 15rem;  /* Adjust height as needed */
+  height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   pointer-events: auto;
   position: relative;
-  touch-action: pan-y;  /* Allow vertical scroll, but handle horizontal swipe */
+  touch-action: pan-y;
+}
+
+#leftBtn-m1,
+#rightBtn-m1 {
+  display: none;
+  pointer-events: none;
+}
+
+#leftBtn-m2,
+#rightBtn-m2 {
+  pointer-events: none;
+  display: none;
 }
 
 /* Phones */
@@ -78,6 +98,12 @@
     font-size: 16px;
   }
 
+  .mbuttonrow {
+    justify-content: space-around;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   h3 {
     font-size: 12px;
   }
@@ -88,6 +114,18 @@
 
   .about {
     width: 80%;
+  }
+
+  #leftBtn-m1,
+  #rightBtn-m1 {
+    display: flex;
+    pointer-events: all;
+  }
+
+  #leftBtn-m2,
+  #rightBtn-m2 {
+    display: flex;
+    pointer-events: all;
   }
 
   .bar-div a {
@@ -136,10 +174,6 @@
     width: 30px;
     height: auto;
   }
-}
-
-/* Phones */
-@media (max-width: 480px) {
 
   h1 {
     font-size: 20px;
@@ -183,13 +217,33 @@
     height: auto;
   }
 
+  #leftBtn-m {
+    display: flex;
+  }
+
+  #rightBtn-m {
+    display: flex;
+  }
+
   .main-container {
     align-items: center;
     justify-content: center;
   }
 
-  .changeBtn {
-    display: none !important;
+  #leftBtn-rel {
+    display: none;
+  }
+
+  #rightBtn-rel {
+    display: none;
+  }
+
+  #leftBtn-o {
+    display: none;
+  }
+
+  #rightBtn-o {
+    display: none;
   }
 
   .project-div {
@@ -200,22 +254,35 @@
   .inner-proj {
     box-sizing: border-box;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   .card-rel.show {
-    width: 110%;
+    width: 100%;
     height: auto;
+    margin: 1.5rem;
+  }
+
+  .song-div {
+    flex-direction: column;
   }
 
   .card {
     background-position: center;
   }
 
+  footer {
+    font-size: 13px;
+  }
+
   .card-o.show {
-    width: 110%;
+    width: 100%;
     height: auto;
+    margin: 1.5rem;
   }
 
   #menu-img {
@@ -238,11 +305,35 @@ iframe {
   opacity: 0.7;
 }
 
-/* Tablets */
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  #title {
+    font-size: 1.5rem;
+  }
+
+  .right {
+    gap: 1rem;
+  }
+
+  .card {
+    width: 50% !important;
+  }
 
   .main-container {
     padding: 2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 850px) {
+
+  .main-container {
+    padding: 2rem;
+    font-size: 15px;
   }
 
   .hero {
@@ -252,11 +343,21 @@ iframe {
   .about {
     width: 100%;
     padding: 2rem;
+    font-size: 0.8rem;
   }
 
-  .song-div {
-    flex-direction: column;
-    gap: 1.5rem;
+  svg {
+    width: 40px;
+    height: auto;
+  }
+
+  .right a {
+    display: none;
+    pointer-events: none;
+  }
+
+  .project-div {
+    width: 100% !important;
   }
 
   iframe {
@@ -265,21 +366,32 @@ iframe {
 
   .bar-div a {
     display: flex;
+    pointer-events: all;
   }
 
   .right {
     box-sizing: border-box;
   }
 
-  #menu-img {
-    display: flex;
+  #title {
+    display: none;
+  }
+
+  .card {
+    font-size: 0.8rem;
+  }
+
+  #title-img {
+    display: block;
     width: 30px;
     height: auto;
   }
 
-  .inner-proj {
-    flex-direction: column;
-    margin: 1rem 0;
+  #menu-img {
+    display: flex;
+    width: 30px;
+    height: auto;
+    pointer-events: all;
   }
 
   .card {

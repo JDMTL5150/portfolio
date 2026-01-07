@@ -1,39 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const cards   = document.querySelectorAll(".card-rel");
-    const oCards  = document.querySelectorAll(".card-o");
-
-    const leftRel  = document.getElementById("leftBtn-rel");
+    const cards = document.querySelectorAll(".card-rel");
+    const oCards = document.querySelectorAll(".card-o");
+    const leftRel = document.getElementById("leftBtn-rel");
     const rightRel = document.getElementById("rightBtn-rel");
-    const leftO    = document.getElementById("leftBtn-o");
-    const rightO   = document.getElementById("rightBtn-o");
+    const leftO = document.getElementById("leftBtn-o");
+    const rightO = document.getElementById("rightBtn-o");
+    const leftM1 = document.getElementById("leftBtn-m1");
+    const rightM1 = document.getElementById("rightBtn-m1");
+    const leftM2 = document.getElementById("leftBtn-m2");
+    const rightM2 = document.getElementById("rightBtn-m2");
 
     const dotsRel = document.querySelectorAll(".dot-rel");
-    const dotsO   = document.querySelectorAll(".dot-o");
-
-    const relContainer = document.querySelector(".carousel-rel");
-    const oContainer   = document.querySelector(".carousel-o");
+    const dotsO = document.querySelectorAll(".dot-o");
 
     let countR = 0;
     let countO = 0;
 
-    // Initial state
-    cards[countR].classList.add("show");
     dotsRel[countR].classList.add("high");
-
-    oCards[countO].classList.add("show");
     dotsO[countO].classList.add("high");
 
-    // ---------- NAV FUNCTIONS ----------
-    function nextRel() {
+    oCards[countO].classList.add("show");
+    cards[countR].classList.add("show");
+
+    function relNext() {
         cards[countR].classList.remove("show");
         dotsRel[countR].classList.remove("high");
-        countR = (countR + 1) % cards.length;
+        countR = (countR + 1 + cards.length) % cards.length;
         cards[countR].classList.add("show");
         dotsRel[countR].classList.add("high");
     }
 
-    function prevRel() {
+    function relPrev() {
         cards[countR].classList.remove("show");
         dotsRel[countR].classList.remove("high");
         countR = (countR - 1 + cards.length) % cards.length;
@@ -41,15 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
         dotsRel[countR].classList.add("high");
     }
 
-    function nextO() {
+    function Onext() {
         oCards[countO].classList.remove("show");
         dotsO[countO].classList.remove("high");
-        countO = (countO + 1) % oCards.length;
+        countO = (countO + 1 + oCards.length) % oCards.length;
         oCards[countO].classList.add("show");
         dotsO[countO].classList.add("high");
     }
 
-    function prevO() {
+    function Oprev() {
         oCards[countO].classList.remove("show");
         dotsO[countO].classList.remove("high");
         countO = (countO - 1 + oCards.length) % oCards.length;
@@ -57,33 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
         dotsO[countO].classList.add("high");
     }
 
-    // ---------- BUTTON CONTROLS ----------
-    rightRel.addEventListener("click", nextRel);
-    leftRel.addEventListener("click", prevRel);
+    rightRel.addEventListener("click", () => relNext());
 
-    rightO.addEventListener("click", nextO);
-    leftO.addEventListener("click", prevO);
+    leftRel.addEventListener("click", () => relPrev());
 
-    // ---------- TOUCH SWIPE (PHONE) ----------
-    function enableSwipe(container, onNext, onPrev) {
-        let startX = 0;
-        let endX = 0;
-        const threshold = 40; // swipe distance in px
+    rightO.addEventListener("click", () => Onext());
 
-        container.addEventListener("touchstart", e => {
-            startX = e.touches[0].clientX;
-        }, { passive: true });
+    leftO.addEventListener("click", () => Oprev());
 
-        container.addEventListener("touchend", e => {
-            endX = e.changedTouches[0].clientX;
-            const diff = startX - endX;
+    leftM1.addEventListener("click",() => relPrev());
 
-            if (Math.abs(diff) > threshold) {
-                diff > 0 ? onNext() : onPrev();
-            }
-        });
-    }
+    rightM1.addEventListener("click",() => relNext());
 
-    enableSwipe(relContainer, nextRel, prevRel);
-    enableSwipe(oContainer, nextO, prevO);
+    leftM2.addEventListener("click",() => Oprev());
+
+    rightM2.addEventListener("click",() => Onext());
 });

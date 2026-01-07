@@ -81,6 +81,10 @@ hr {
         height: auto;
     }
 
+    .work-card {
+        text-align: center;
+    }
+
     .work-card img {
         display: none;
     }
@@ -143,6 +147,51 @@ hr {
     .aside-card {
         width: 100%;
         float: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .right a {
+        display: none;
+        pointer-events:  none;
+    }
+
+    .bar-div {
+        z-index: 1;
+    }
+
+    .bar-div a {
+        pointer-events: all;
+    }
+
+    #title {
+        display: none;
+    }
+
+    #menu-img {
+        display: block;
+        width: 40px;
+        height: auto;
+    }
+
+    #title-img {
+        display: block;
+        width: 35px;
+        height: auto;
+    }
+
+    svg {
+        width: 40px;
+        height: auto;
+    }
+
+    .job-icon {
+        display: none;
+    }
+
+    .work-card {
+        font-size: 0.5rem;
+        text-align: center;
     }
 }
 
