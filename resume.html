@@ -12,7 +12,10 @@
 </head>
 
 <body>
-    <div class="group-row nav">
+    <div class="back-to-top">
+        <a id="topBtn" href="#navigator">▲</a>
+    </div>
+    <div id="navigator" class="group-row nav">
         <!-- Header Elements -->
         <div class="left">
             <h1 id="title">
@@ -46,11 +49,11 @@
                 const menuLeave = document.getElementById("menu-leave");
                 const barBtn = document.getElementById("menu-btn");
 
-                barBtn.addEventListener("click",() => {
+                barBtn.addEventListener("click", () => {
                     barM.classList.toggle("show");
                 });
 
-                menuLeave.addEventListener("click",() => {
+                menuLeave.addEventListener("click", () => {
                     barM.classList.toggle("show");
                 });
             </script>
@@ -124,21 +127,21 @@
                     </div>
                 </div>
                 <!-- JS Skill -->
-                 <div class="group-row">
+                <div class="group-row">
                     <img class="skill-icon" src="img/JavaScript.png" alt="JavaScript">
                     <div class="outer-progress">
                         <div class="inner" id="inner-bar-js"></div>
                     </div>
                 </div>
                 <!-- PHP Skill -->
-                 <div class="group-row">
+                <div class="group-row">
                     <img class="skill-icon" src="img/php.png" alt="PHP">
                     <div class="outer-progress">
                         <div class="inner" id="inner-bar-php"></div>
                     </div>
                 </div>
                 <!-- R Skill -->
-                 <div class="group-row">
+                <div class="group-row">
                     <img class="skill-icon" src="img/R.png" alt="R">
                     <div class="outer-progress">
                         <div class="inner" id="inner-bar-r"></div>
@@ -169,7 +172,7 @@
             </aside>
         </div>
         <div class="resume">
-            <button id="edBtn" ><strong>Education ➔</strong></button>
+            <button id="edBtn"><strong>Education ➔</strong></button>
             <div class="break"></div>
             <p><strong>Motivated, strong work ethic,</strong> seeking work experience and skill development
                 opportunities within your
@@ -264,7 +267,7 @@
         </div>
         <!-- School -->
         <div class="school">
-            <button id="workBtn" ><strong>⬅︎ Work</strong></button>
+            <button id="workBtn"><strong>⬅︎ Work</strong></button>
             <div class="break"></div>
             <div style="justify-content: center;" class="group-row">
                 <img src="img/ed.png" alt="">
@@ -308,4 +311,5 @@
     </footer>
 </body>
 <script src="JS/changePage.js"></script>
+<script src="JS/BackToTop.js"></script>
 </html>

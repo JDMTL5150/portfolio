@@ -116,21 +116,16 @@
     width: 80%;
   }
 
-  #leftBtn-m1,
-  #rightBtn-m1 {
-    display: flex;
-    pointer-events: all;
-  }
-
   #leftBtn-m1:hover,
-  #rightBtn-m1:hover {
+  #rightBtn-m1:hover,
+  #leftBtn-m2:hover,
+  #rightBtn-m2:hover {
+    color: inherit;
     transform: none;
   }
 
-  #leftBtn-m2:hover {
-    all: unset;
-  }
-
+  #leftBtn-m1,
+  #rightBtn-m1,
   #leftBtn-m2,
   #rightBtn-m2 {
     display: flex;

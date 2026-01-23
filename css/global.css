@@ -11,6 +11,41 @@
     --transition: all 0.3s ease-in-out;
 }
 
+*{
+    scroll-behavior: smooth;
+}
+
+#topBtn {
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    background-color: var(--green-main);
+    border: none;
+    border-radius: 60%;
+    transition: var(--transition);
+}
+
+#topBtn.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#topBtn:hover {
+    background-color: #32D17C;
+    color: var(--deep-back);
+    transform: scale(1.1);
+}
+
+.back-to-top {
+    position: fixed;
+    padding: 2rem;
+    right: 0;
+    bottom: 0;
+}
+
 .group-row {
     display: flex;
     flex-direction: row;
