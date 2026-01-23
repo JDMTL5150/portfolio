@@ -33,6 +33,14 @@
     pointer-events: all;
 }
 
+@media (max-width: 1200px) {
+    #topBtn:hover {
+        background-color: inherit;
+        color: inherit;
+        transform: none;
+    }
+}
+
 #topBtn:hover {
     background-color: #32D17C;
     color: var(--deep-back);
